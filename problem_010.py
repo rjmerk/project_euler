@@ -28,6 +28,7 @@ def sieve_of_eratosthenes(n):
     if n < 5:
         return np.array([2, 3])
     primes = np.full(n, True)
+    primes[0] = False
     primes[1] = False
     primes[4::2] = False
 
