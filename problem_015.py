@@ -9,7 +9,7 @@ import numpy as np
 from utils import measure_execution_time
 
 
-SIZE = 1_000
+SIZE = 20
 
 
 def main():
