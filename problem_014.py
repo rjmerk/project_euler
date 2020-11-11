@@ -30,7 +30,7 @@ def main():
             if chain > longest:
                 longest = chain
                 result = n
-    print(f"The starting number under 1 million with longest Collatz chain is {result}")
+    print(f"The starting number under 1 million with longest Collatz chain is {result}, with length {longest}")
 
 
 def length_of_chain(starting_number, chain_length_dict):
