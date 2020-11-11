@@ -14,7 +14,6 @@ def main():
     result = sum(multiples_of_3) + sum(multiples_of_5) - sum(multiples_of_15)
     print("Problem 1")
     print(f"The sum of all the multiples of 3 or 5 below {limit} = {result}")
-    print("=" * 80)
 
 
 if __name__ == '__main__':

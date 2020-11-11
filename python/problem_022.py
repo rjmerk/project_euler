@@ -11,7 +11,7 @@ from utils import measure_execution_time
 def main():
     print('Problem 22')
     with measure_execution_time():
-        with open('p022_names.txt', 'r', encoding='ascii') as file:
+        with open('../resources/p022_names.txt', 'r', encoding='ascii') as file:
             name_list = file.readline().replace('"', '').split(',')
         result = sum(name_scores(name_list))
     print(f'The total of all name scores in the file is {result}')

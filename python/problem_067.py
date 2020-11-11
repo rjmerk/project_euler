@@ -33,7 +33,7 @@ def main() -> None:
 
 def get_triangle_from_file():
     result = []
-    with open("p067_triangle.txt", "r") as file:
+    with open("../resources/p067_triangle.txt", "r") as file:
         for line in file:
             result.append([int(n) for n in line.split(" ")])
     return result
