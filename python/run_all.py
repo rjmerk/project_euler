@@ -77,5 +77,5 @@ def main():
 
 
 if __name__ == '__main__':
-    with measure_execution_time():
+    with measure_execution_time("Time for all problems together"):
         main()
