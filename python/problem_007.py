@@ -25,7 +25,7 @@ def main() -> None:
 
 def n_th_prime_number(n):
     """
-    The approach is to increamentally calculate larger and larger
+    The approach is to incrementally calculate larger and larger
     sieves of Eratosthenes until we have n primes.
     """
     sieve_seize = SIEVE_STEP_SIZE * n

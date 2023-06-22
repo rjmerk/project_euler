@@ -15,7 +15,7 @@ SIZE = 20
 def main():
     print("Problem 15")
     with measure_execution_time():
-        # we add 1 to size as a NxN grid has N+1xN+1 intersecetions.
+        # we add 1 to size as a NxN grid has N+1xN+1 intersections.
         result = nr_routes_in_grid(SIZE + 1)
         print(f"the number of routes through a {SIZE}x{SIZE} grid = {result}")
 

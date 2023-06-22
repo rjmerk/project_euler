@@ -16,7 +16,7 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
 """
 from utils import measure_execution_time
-
+"837799 length 524"
 
 def main():
     print("Problem 14")
@@ -35,19 +35,19 @@ def main():
 
 def length_of_chain(starting_number, chain_length_dict):
     n = starting_number
-    i = 0
+    result = 0
     while n > 1:
         if n in chain_length_dict:
-            result = i + chain_length_dict[n]
+            result += chain_length_dict[n]
             chain_length_dict[starting_number] = result
             return result
         if n % 2 == 0:
             n /= 2
         else:
             n = 3*n + 1
-        i += 1
-    chain_length_dict[starting_number] = i
-    return i
+        result += 1
+    chain_length_dict[starting_number] = result
+    return result
 
 
 if __name__ == '__main__':

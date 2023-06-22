@@ -23,12 +23,41 @@ from utils import measure_execution_time
 
 from problem_018 import find_longest_path_triangle
 
+import matplotlib.pyplot as plt
+import numpy as np
+
 
 def main() -> None:
-    print("Problem 67")
-    with measure_execution_time():
-        result = find_longest_path_triangle(get_triangle_from_file())
-    print(f"The maximum total from top to bottom of the triangle is {result}")
+    fig, ax = plt.subplots()  # Create a figure containing a single axes.
+    data = [
+        ("2021-11-01", 101),
+        ("2021-11-02", 104),
+        ("2021-11-03", None),
+        ("2021-11-04", 102),
+        ("2021-11-05", 103),
+        ("2021-11-06", 103),
+        ("2021-11-07", 103),
+        ("2021-11-08", 103),
+        ("2021-11-09", 102),
+        ("2021-11-10", None),
+        ("2021-11-11", None),
+        ("2021-11-12", None),
+        ("2021-11-13", 98),
+        ("2021-11-14", 98),
+    ]
+    x_values = [d[0] for d in data]
+    y_values = [d[1] for d in data]
+
+
+    ax.plot(x_values, y_values)  # Plot some data on the axes.
+    ax.xaxis.set_major_locator(plt.MultipleLocator(7))
+    ax.set_ylim([75, 110])
+    plt.savefig("plot.png", format="png")
+
+    # print("Problem 67")
+    # with measure_execution_time():
+    #     result = find_longest_path_triangle(get_triangle_from_file())
+    # print(f"The maximum total from top to bottom of the triangle is {result}")
 
 
 def get_triangle_from_file():

@@ -33,7 +33,7 @@ LIMIT = 13
 
 
 def main():
-    print("Problem 7")
+    print("Problem 8")
     with measure_execution_time():
         product, adjacent_digits = adjacent_digits_with_highest_product(
             LIMIT,
